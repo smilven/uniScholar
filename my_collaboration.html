@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniScholar Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="h-16 flex items-center justify-between px-6">
+            <h1 class="text-xl font-bold text-gray-800">UniScholar Nexus</h1>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold" href="find_research.html">
+                        Find Research
+                    </a>
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold" href="find_collaboration.html">Find
+                        Collaboration</a>
+                </div>
+                <div class="relative">
+                    <input
+                        class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." type="text" />
+                    <span class="material-icons absolute left-3 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDydHKOGfm8m7UktKxPrS0kPvnHSRJOY4oCOt8uvXP0ZPzh3P0pnZcu5B7i0Fm6kW5pFe9BfgnS9HGLAeSv-IorsXcidcZAdLl5uwwrnjvjM6Tj4IXjbSe8RY-NefXlR2Xn-AbG0X4Ds4ce9CI3tgRYqeE9ZTt3VfBL04dnSmCditSN9iKO-Ocqh-RI4BuX215eEgDklc0tJsleB44GXbvHPlKytbY96b7OUY7mZG8_QYSNgGqxaBM3RH4g2ISxx0OpfL7bW7qLTCM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section (Sidebar + Content) -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 shadow-md flex flex-col fixed top-16 left-0 bottom-0 z-20">
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="dashboard.html">
+                    <span class="material-icons">dashboard</span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="paper_submission.html">
+                    <span class="material-icons">description</span>
+                    <span class="ml-3">Paper Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="collab_submission.html">
+                    <span class="material-icons">group_add</span>
+                    <span class="ml-3">Collab Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="my_research.html">
+                    <span class="material-icons">science</span>
+                    <span class="ml-3">My Research</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-md" href="my_collaboration.html">
+                    <span class="material-icons">hub</span>
+                    <span class="ml-3">My Collaborations</span>
+                </a>
+             
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64">
+            <div class="flex-1 p-8">
+                <div class="flex justify-between items-center mb-6">
+                    <h1 class="text-3xl font-bold text-gray-900">My Collaboration</h1>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors">
+                        New Group
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">
+                        My Individual &amp; Group Conversation
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                                    <span class="material-icons text-gray-500">group</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Group Name</p>
+                                    <p class="text-sm text-gray-500">Active Members: 5</p>
+                                </div>
+                            </div>
+                            <span class="material-icons text-gray-400">chevron_right</span>
+                        </div>
+                        <div class="flex items-center justify-between p-4 rounded-lg hover:bg-gray-50 cursor-pointer">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                                    <span class="material-icons text-gray-500">group</span>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-800">Group Name</p>
+                                    <p class="text-sm text-gray-500">Active Members: 5</p>
+                                </div>
+                            </div>
+                            <span class="material-icons text-gray-400">chevron_right</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-gray-800">Request</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                                    <span class="material-icons text-gray-500">person</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-800">
+                                        Jim Ng Ying Gee has requested to add you to the friends
+                                        list
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 rounded-full hover:bg-green-100 text-green-500">
+                                    <span class="material-icons">check</span>
+                                </button>
+                                <button class="p-2 rounded-full hover:bg-red-100 text-red-500">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between p-4 rounded-lg bg-gray-50">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                                    <span class="material-icons text-gray-500">person</span>
+                                </div>
+                                <div>
+                                    <p class="text-gray-800">
+                                        Wong Wen Jun has requested to join your collaboration
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="p-2 rounded-full hover:bg-green-100 text-green-500">
+                                    <span class="material-icons">check</span>
+                                </button>
+                                <button class="p-2 rounded-full hover:bg-red-100 text-red-500">
+                                    <span class="material-icons">close</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <!-- Tab 按钮 -->
+                    <div class="flex space-x-6 border-b mb-4">
+                        <button id="tab-collab"
+                            class="tab-btn text-blue-600 font-semibold pb-2 border-b-2 border-blue-600">
+                            Published
+                        </button>
+                        <button id="tab-submitted" class="tab-btn text-gray-500 font-semibold pb-2">
+                            Submitted
+                        </button>
+                    </div>
+
+                    <!-- Collab 内容 -->
+                    <div id="content-collab">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="border-b bg-gray-100">
+                                    <tr>
+                                        <th class="p-4 font-semibold text-gray-600">Title</th>
+                                        <th class="p-4 font-semibold text-gray-600">Author</th>
+                                        <th class="p-4 font-semibold text-gray-600">
+                                            Submission Date
+                                        </th>
+                                        <th class="p-4 font-semibold text-gray-600">View</th>
+                                        <th class="p-4 font-semibold text-gray-600">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="p-4">Find FAD student for design front end</td>
+                                        <td class="p-4">Mii Si Heng</td>
+                                        <td class="p-4">2025-07-20</td>
+                                        <td class="p-4">40</td>
+                                        <td class="text-left py-3 px-4 flex space-x-2">
+                                            <button
+                                                class="bg-red-500 text-white px-4 py-1 rounded-md text-sm hover:bg-red-600">Delete</button>
+                                            <button
+                                                class="bg-gray-500 text-white px-4 py-1 rounded-md text-sm hover:bg-gray-600">Hide</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="p-4">Need one more student from FEIT</td>
+                                        <td class="p-4">Mii Si Heng</td>
+                                        <td class="p-4">2025-07-20</td>
+                                        <td class="p-4">40</td>
+                                        <td class="text-left py-3 px-4 flex space-x-2">
+                                            <button
+                                                class="bg-red-500 text-white px-4 py-1 rounded-md text-sm hover:bg-red-600">
+                                                Delete
+                                            </button>
+                                            <button
+                                                class="bg-gray-500 text-white px-4 py-1 rounded-md text-sm hover:bg-gray-600">
+                                                Hide
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Submitted 内容（默认隐藏） -->
+                    <div id="content-submitted" class="hidden">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead class="border-b bg-gray-100">
+                                    <tr>
+                                        <th class="p-4 font-semibold text-gray-600">Title</th>
+                                        <th class="p-4 font-semibold text-gray-600">Author</th>
+                                        <th class="p-4 font-semibold text-gray-600">
+                                            Submission Date
+                                        </th>
+                                        <th class="p-4 font-semibold text-gray-600">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="p-4">Find FAD student for design front end</td>
+                                        <td class="p-4">Mii Si Heng</td>
+                                        <td class="p-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">
+                                            <span
+                                                class="bg-yellow-200 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b hover:bg-gray-50">
+                                        <td class="p-4">Need one more student from FEIT</td>
+                                        <td class="p-4">Mii Si Heng</td>
+                                        <td class="p-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">
+                                            <span
+                                                class="bg-yellow-200 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const tabCollab = document.getElementById("tab-collab");
+                    const tabSubmitted = document.getElementById("tab-submitted");
+                    const contentCollab = document.getElementById("content-collab");
+                    const contentSubmitted =
+                        document.getElementById("content-submitted");
+
+                    tabCollab.addEventListener("click", () => {
+                        tabCollab.classList.add(
+                            "text-blue-600",
+                            "border-b-2",
+                            "border-blue-600"
+                        );
+                        tabCollab.classList.remove("text-gray-500");
+                        tabSubmitted.classList.remove(
+                            "text-blue-600",
+                            "border-b-2",
+                            "border-blue-600"
+                        );
+                        tabSubmitted.classList.add("text-gray-500");
+                        contentCollab.classList.remove("hidden");
+                        contentSubmitted.classList.add("hidden");
+                    });
+
+                    tabSubmitted.addEventListener("click", () => {
+                        tabSubmitted.classList.add(
+                            "text-blue-600",
+                            "border-b-2",
+                            "border-blue-600"
+                        );
+                        tabSubmitted.classList.remove("text-gray-500");
+                        tabCollab.classList.remove(
+                            "text-blue-600",
+                            "border-b-2",
+                            "border-blue-600"
+                        );
+                        tabCollab.classList.add("text-gray-500");
+                        contentSubmitted.classList.remove("hidden");
+                        contentCollab.classList.add("hidden");
+                    });
+                </script>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+            <div>
+                <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                <a class="hover:text-blue-500" href="#">Contact Us</a>
+            </div>
+            <p>©2025 UniScholar Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

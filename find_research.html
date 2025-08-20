@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniScholar Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="h-16 flex items-center justify-between px-6">
+            <h1 class="text-xl font-bold text-gray-800">UniScholar Nexus</h1>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
+                    <a class="text-blue-600 hover:text-blue-500 font-semibold border-b-2 border-blue-600"
+                        href="find_research.html">
+                        Find Research
+                    </a>
+                    <a class="text-gray-600 hover:text-blue-500 font-semibold" href="find_collaboration.html">Find
+                        Collaboration</a>
+                </div>
+                <div class="relative">
+                    <input
+                        class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." type="text" />
+                    <span class="material-icons absolute left-3 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDydHKOGfm8m7UktKxPrS0kPvnHSRJOY4oCOt8uvXP0ZPzh3P0pnZcu5B7i0Fm6kW5pFe9BfgnS9HGLAeSv-IorsXcidcZAdLl5uwwrnjvjM6Tj4IXjbSe8RY-NefXlR2Xn-AbG0X4Ds4ce9CI3tgRYqeE9ZTt3VfBL04dnSmCditSN9iKO-Ocqh-RI4BuX215eEgDklc0tJsleB44GXbvHPlKytbY96b7OUY7mZG8_QYSNgGqxaBM3RH4g2ISxx0OpfL7bW7qLTCM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section (Sidebar + Content) -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 shadow-md flex flex-col fixed top-16 left-0 bottom-0 z-20">
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="dashboard.html">
+                    <span class="material-icons">dashboard</span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="paper_submission.html">
+                    <span class="material-icons">description</span>
+                    <span class="ml-3">Paper Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="collab_submission.html">
+                    <span class="material-icons">group_add</span>
+                    <span class="ml-3">Collab Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="my_research.html">
+                    <span class="material-icons">science</span>
+                    <span class="ml-3">My Research</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="my_collaboration.html">
+                    <span class="material-icons">hub</span>
+                    <span class="ml-3">My Collaborations</span>
+                </a>
+              
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64">
+            <div class="flex-1 p-8">
+                <h1 class="text-3xl font-bold mb-6">Find Research Paper</h1>
+                <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                    <div class="relative items-center mb-4">
+                        <input
+                            class="bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Find Your Research Paper" type="text" />
+                        <span
+                            class="material-icons absolute right-4 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                    </div>
+
+
+
+
+                    <div class="flex flex-wrap gap-2"> <span
+                            class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-gray-300">Keywords</span>
+                        <span
+                            class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-gray-300">Keywords</span>
+                        <span
+                            class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-gray-300">Keywords</span>
+                        <span
+                            class="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-gray-300">Keywords</span>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Search Result</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
+                        <div class="flex-1 pr-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Research Paper Title 1</h3>
+                            <p class="text-gray-600 text-sm">A brief description of the research paper. This summary
+                                provides key insights and findings of the study, helping users quickly grasp the essence
+                                of the work.</p>
+                        </div> <button
+                            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">View</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
+                        <div class="flex-1 pr-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Research Paper Title 2</h3>
+                            <p class="text-gray-600 text-sm">Another research paper description. This one delves into a
+                                different topic, offering unique perspectives and methodologies for interested scholars
+                                to explore.</p>
+                        </div> <button
+                            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">View</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
+                        <div class="flex-1 pr-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Research Paper Title 3</h3>
+                            <p class="text-gray-600 text-sm">This is the third paper in the list. It focuses on
+                                innovative techniques and their applications, contributing significantly to its field of
+                                study.</p>
+                        </div> <button
+                            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">View</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
+                        <div class="flex-1 pr-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Research Paper Title 4</h3>
+                            <p class="text-gray-600 text-sm">A fourth research paper with a compelling abstract. Its
+                                findings are groundbreaking and promise to influence future research directions.</p>
+                        </div> <button
+                            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">View</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-between">
+                        <div class="flex-1 pr-6">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Research Paper Title 5</h3>
+                            <p class="text-gray-600 text-sm">The final paper in this set of results. It provides a
+                                comprehensive review of existing literature and proposes a new theoretical framework.
+                            </p>
+                        </div> <button
+                            class="bg-blue-500 text-white font-bold py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">View</button>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">AI Generated Tags Recommendation For Search...
+                    </h3>
+                    <div class="flex flex-wrap gap-2"> <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                        <span
+                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full cursor-pointer hover:bg-blue-200">Keywords</span>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-center">
+                    <nav class="flex items-center space-x-2"> <a
+                            class="px-4 py-2 text-gray-500 bg-white rounded-md hover:bg-gray-100" href="#"> <span
+                                class="material-icons text-lg">chevron_left</span> </a> <a
+                            class="px-4 py-2 text-white bg-blue-500 rounded-md" href="#">1</a> <a
+                            class="px-4 py-2 text-gray-700 bg-white rounded-md hover:bg-gray-100" href="#">2</a> <a
+                            class="px-4 py-2 text-gray-700 bg-white rounded-md hover:bg-gray-100" href="#">3</a> <span
+                            class="px-4 py-2 text-gray-700">...</span> <a
+                            class="px-4 py-2 text-gray-700 bg-white rounded-md hover:bg-gray-100" href="#">10</a> <a
+                            class="px-4 py-2 text-gray-500 bg-white rounded-md hover:bg-gray-100" href="#"> <span
+                                class="material-icons text-lg">chevron_right</span> </a> </nav>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+            <div>
+                <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                <a class="hover:text-blue-500" href="#">Contact Us</a>
+            </div>
+            <p>©2025 UniScholar Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

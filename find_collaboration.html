@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniScholar Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="h-16 flex items-center justify-between px-6">
+            <h1 class="text-xl font-bold text-gray-800">UniScholar Nexus</h1>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold"
+                        href="find_research.html">
+                        Find Research
+                    </a>
+                    <a class="text-blue-600 hover:text-blue-500 font-semibold border-b-2 border-blue-600" href="find_collaboration.html">Find
+                        Collaboration</a>
+                </div>
+                <div class="relative">
+                    <input
+                        class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." type="text" />
+                    <span class="material-icons absolute left-3 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDydHKOGfm8m7UktKxPrS0kPvnHSRJOY4oCOt8uvXP0ZPzh3P0pnZcu5B7i0Fm6kW5pFe9BfgnS9HGLAeSv-IorsXcidcZAdLl5uwwrnjvjM6Tj4IXjbSe8RY-NefXlR2Xn-AbG0X4Ds4ce9CI3tgRYqeE9ZTt3VfBL04dnSmCditSN9iKO-Ocqh-RI4BuX215eEgDklc0tJsleB44GXbvHPlKytbY96b7OUY7mZG8_QYSNgGqxaBM3RH4g2ISxx0OpfL7bW7qLTCM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section (Sidebar + Content) -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 shadow-md flex flex-col fixed top-16 left-0 bottom-0 z-20">
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="dashboard.html">
+                    <span class="material-icons">dashboard</span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="paper_submission.html">
+                    <span class="material-icons">description</span>
+                    <span class="ml-3">Paper Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="collab_submission.html">
+                    <span class="material-icons">group_add</span>
+                    <span class="ml-3">Collab Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="my_research.html">
+                    <span class="material-icons">science</span>
+                    <span class="ml-3">My Research</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="my_collaboration.html">
+                    <span class="material-icons">hub</span>
+                    <span class="ml-3">My Collaborations</span>
+                </a>
+            
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64">
+            <div class="flex-1 p-8">
+                <h1 class="text-3xl font-bold mb-6">Find Collaborations</h1>
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="relative">
+                        <input
+                            class="bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Find Your Interested Project" type="text" />
+                        <span
+                            class="material-icons absolute right-4 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                    </div>
+                    <div class="mt-4 flex space-x-4">
+                        <button
+                            class="bg-blue-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-600">Department</button>
+                        <button
+                            class="bg-gray-200 text-gray-700 px-6 py-2 rounded-lg font-semibold hover:bg-gray-300">Types</button>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold mb-4">Collaboration Posts</h2>
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-gray-500 text-3xl">biotech</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">Research on Quantum Entanglement</h3>
+                            <p class="text-gray-600 mb-4">We are looking for a physicist with expertise in quantum
+                                mechanics
+                                to collaborate on a new study exploring the applications of quantum entanglement in
+                                computing.</p>
+                        </div>
+                        <button
+                            class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 self-center">Join</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-gray-500 text-3xl">psychology</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">Cognitive Neuroscience Collaboration</h3>
+                            <p class="text-gray-600 mb-4">Seeking collaborators for a project on the neural basis of
+                                decision-making. Experience with fMRI and data analysis is highly desirable.</p>
+                        </div>
+                        <button
+                            class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 self-center">Join</button>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md flex items-start space-x-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gray-200 rounded-lg flex items-center justify-center">
+                            <span class="material-icons text-gray-500 text-3xl">computer</span>
+                        </div>
+                        <div class="flex-grow">
+                            <h3 class="text-xl font-semibold mb-2">AI in Medical Diagnosis</h3>
+                            <p class="text-gray-600 mb-4">Our team is developing an AI model to improve the accuracy of
+                                medical imaging diagnosis. We need an expert in machine learning.</p>
+                        </div>
+                        <button
+                            class="bg-green-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-green-600 self-center">Join</button>
+                    </div>
+                </div>
+                <div class="mt-8 flex justify-center">
+                    <nav class="flex items-center space-x-2">
+                        <a class="px-4 py-2 text-gray-500 bg-white rounded-lg hover:bg-gray-100" href="#">
+                            <span class="material-icons text-lg">chevron_left</span>
+                        </a>
+                        <a class="px-4 py-2 text-white bg-blue-500 rounded-lg" href="#">1</a>
+                        <a class="px-4 py-2 text-gray-700 bg-white rounded-lg hover:bg-gray-100" href="#">2</a>
+                        <a class="px-4 py-2 text-gray-700 bg-white rounded-lg hover:bg-gray-100" href="#">3</a>
+                        <a class="px-4 py-2 text-gray-700 bg-white rounded-lg hover:bg-gray-100" href="#">...</a>
+                        <a class="px-4 py-2 text-gray-700 bg-white rounded-lg hover:bg-gray-100" href="#">10</a>
+                        <a class="px-4 py-2 text-gray-500 bg-white rounded-lg hover:bg-gray-100" href="#">
+                            <span class="material-icons text-lg">chevron_right</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <footer class="bg-white border-t mt-auto">
+                <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+                    <div>
+                        <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                        <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                        <a class="hover:text-blue-500" href="#">Contact Us</a>
+                    </div>
+                    <div>
+                        <p>©2025 UniScholar Nexus. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+            <div>
+                <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                <a class="hover:text-blue-500" href="#">Contact Us</a>
+            </div>
+            <p>©2025 UniScholar Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniScholar Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="h-16 flex items-center justify-between px-6">
+            <h1 class="text-xl font-bold text-gray-800">UniScholar Nexus</h1>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold"
+                        href="find_research.html">
+                        Find Research
+                    </a>
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold" href="find_collaboration.html">Find
+                        Collaboration</a>
+                </div>
+                <div class="relative">
+                    <input
+                        class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." type="text" />
+                    <span class="material-icons absolute left-3 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDydHKOGfm8m7UktKxPrS0kPvnHSRJOY4oCOt8uvXP0ZPzh3P0pnZcu5B7i0Fm6kW5pFe9BfgnS9HGLAeSv-IorsXcidcZAdLl5uwwrnjvjM6Tj4IXjbSe8RY-NefXlR2Xn-AbG0X4Ds4ce9CI3tgRYqeE9ZTt3VfBL04dnSmCditSN9iKO-Ocqh-RI4BuX215eEgDklc0tJsleB44GXbvHPlKytbY96b7OUY7mZG8_QYSNgGqxaBM3RH4g2ISxx0OpfL7bW7qLTCM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section (Sidebar + Content) -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 shadow-md flex flex-col fixed top-16 left-0 bottom-0 z-20">
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="dashboard.html">
+                    <span class="material-icons">dashboard</span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="paper_submission.html">
+                    <span class="material-icons">description</span>
+                    <span class="ml-3">Paper Submission</span>
+                </a>
+            <a class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-md"
+                href="collab_submission.html">
+                <span class="material-icons">group_add</span>
+                <span class="ml-3">Collab Submission</span>
+                </a>
+
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="my_research.html">
+                    <span class="material-icons">science</span>
+                    <span class="ml-3">My Research</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="my_collaboration.html">
+                    <span class="material-icons">hub</span>
+                    <span class="ml-3">My Collaborations</span>
+                </a>
+
+            </nav>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 ml-64">
+            <div class="flex-1 p-8 overflow-y-auto">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Collab Submission</h2>
+                <form>
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="project-title">Project
+                                Title</label>
+                            <input
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="project-title" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1"
+                                for="project-description">Project Description</label>
+                            <textarea
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="project-description" rows="4"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1"
+                                for="participation-number">Required Participation Number</label>
+                            <input
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="participation-number" type="number" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="keywords">Keywords
+                                (Optional)</label>
+                            <input
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="keywords" type="text" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1" for="course-department">Your
+                                Course Department</label>
+                            <select
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                id="course-department">
+                                <option>Select your department</option>
+                                <option>Computer Science</option>
+                                <option>Engineering</option>
+                                <option>Arts &amp; Humanities</option>
+                                <option>Business</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Upload Assignment File
+                                (Optional)</label>
+                            <div
+                                class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <svg aria-hidden="true" class="mx-auto h-12 w-12 text-gray-400" fill="none"
+                                        stroke="currentColor" viewBox="0 0 48 48">
+                                        <path
+                                            d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    </svg>
+                                    <div class="flex text-sm text-gray-600">
+                                        <label
+                                            class="relative cursor-pointer bg-white rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-blue-500"
+                                            for="file-upload">
+                                            <span>Upload a file</span>
+                                            <input class="sr-only" id="file-upload" name="file-upload" type="file" />
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex justify-end">
+                        <button
+                            class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <footer class="bg-white border-t mt-auto">
+                <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+                    <div>
+                        <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                        <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                        <a class="hover:text-blue-500" href="#">Contact Us</a>
+                    </div>
+                    <div>
+                        <p>©2025 UniScholar Nexus. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+            <div>
+                <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                <a class="hover:text-blue-500" href="#">Contact Us</a>
+            </div>
+            <p>©2025 UniScholar Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

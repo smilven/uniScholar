@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>UniScholar Nexus</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <div class="h-16 flex items-center justify-between px-6">
+            <h1 class="text-xl font-bold text-gray-800">UniScholar Nexus</h1>
+            <div class="flex items-center space-x-6">
+                <div class="flex items-center space-x-6">
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold" href="find_research.html">
+                        Find Research
+                    </a>
+                    <a class="text-grey-600 hover:text-blue-500 font-semibold" href="find_collaboration.html">Find
+                        Collaboration</a>
+                </div>
+                <div class="relative">
+                    <input
+                        class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 pl-10 focus:outline-none focus:bg-white focus:ring-2 focus:ring-blue-500"
+                        placeholder="Search..." type="text" />
+                    <span class="material-icons absolute left-3 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                </div>
+                <img alt="User avatar" class="w-10 h-10 rounded-full"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDydHKOGfm8m7UktKxPrS0kPvnHSRJOY4oCOt8uvXP0ZPzh3P0pnZcu5B7i0Fm6kW5pFe9BfgnS9HGLAeSv-IorsXcidcZAdLl5uwwrnjvjM6Tj4IXjbSe8RY-NefXlR2Xn-AbG0X4Ds4ce9CI3tgRYqeE9ZTt3VfBL04dnSmCditSN9iKO-Ocqh-RI4BuX215eEgDklc0tJsleB44GXbvHPlKytbY96b7OUY7mZG8_QYSNgGqxaBM3RH4g2ISxx0OpfL7bW7qLTCM" />
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section (Sidebar + Content) -->
+    <div class="flex flex-1 pt-16">
+        <!-- Sidebar -->
+        <aside class="bg-white w-64 shadow-md flex flex-col fixed top-16 left-0 bottom-0 z-20">
+            <nav class="flex-1 px-4 py-6 space-y-2">
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md" href="dashboard.html">
+
+                    <span class="material-icons">dashboard</span>
+                    <span class="ml-3">Dashboard</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="paper_submission.html">
+                    <span class="material-icons">description</span>
+                    <span class="ml-3">Paper Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="collab_submission.html">
+                    <span class="material-icons">group_add</span>
+                    <span class="ml-3">Collab Submission</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-white bg-blue-600 rounded-md" href="my_research.html">
+                    <span class="material-icons">science</span>
+                    <span class="ml-3">My Research</span>
+                </a>
+                <a class="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200 rounded-md"
+                    href="my_collaboration.html">
+                    <span class="material-icons">hub</span>
+                    <span class="ml-3">My Collaborations</span>
+                </a>
+             
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 ml-64">
+            <div class="flex-1 p-8">
+                <h1 class="text-2xl font-bold text-gray-800 mb-6">My Research</h1>
+                <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+                    <div class="relative">
+                        <input
+                            class="bg-gray-100 border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="Search Your Research Paper" type="text" />
+                        <span
+                            class="material-icons absolute right-4 top-1/4 -translate-y-1/2 text-gray-400">search</span>
+                    </div>
+
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <!-- Tabs -->
+                    <div class="mb-6">
+                        <div class="border-b border-gray-200">
+                            <nav aria-label="Tabs" class="-mb-px flex space-x-8">
+                                <button id="tab-shared"
+                                    class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 border-blue-500 font-semibold text-blue-600">
+                                    Published
+                                </button>
+                                <button id="tab-submitted"
+                                    class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 border-transparent font-semibold text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                                    Pending
+                                </button>
+
+
+                            </nav>
+                        </div>
+                    </div>
+
+                    <!-- Shared Table -->
+                    <div id="content-shared">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-200 text-gray-600">
+                                    <tr>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Author</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Submission Date
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">View</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    <tr>
+                                        <td class="text-left py-3 px-4">UniScholar Nexus SDD Report</td>
+                                        <td class="text-left py-3 px-4">Mii Si Heng</td>
+                                        <td class="text-left py-3 px-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">40</td>
+                                        <td class="text-left py-3 px-4 flex space-x-2">
+                                            <button
+                                                class="bg-red-500 text-white px-4 py-1 rounded-md text-sm hover:bg-red-600">Delete</button>
+                                            <button
+                                                class="bg-gray-500 text-white px-4 py-1 rounded-md text-sm hover:bg-gray-600">Hide</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="text-left py-3 px-4">UniScholar Nexus SDD Report</td>
+                                        <td class="text-left py-3 px-4">Mii Si Heng</td>
+                                        <td class="text-left py-3 px-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">40</td>
+                                        <td class="text-left py-3 px-4 flex space-x-2">
+                                            <button
+                                                class="bg-red-500 text-white px-4 py-1 rounded-md text-sm hover:bg-red-600">Delete</button>
+                                            <button
+                                                class="bg-gray-500 text-white px-4 py-1 rounded-md text-sm hover:bg-gray-600">Hide</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Submitted Table -->
+                    <div id="content-submitted" class="hidden">
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full bg-white">
+                                <thead class="bg-gray-200 text-gray-600">
+                                    <tr>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Title</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Author</th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Submission Date
+                                        </th>
+                                        <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700">
+                                    <tr>
+                                        <td class="text-left py-3 px-4">UniScholar Nexus SDD Report</td>
+                                        <td class="text-left py-3 px-4">Mii Si Heng</td>
+                                        <td class="text-left py-3 px-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">
+                                            <span
+                                                class="bg-yellow-200 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr class="bg-gray-50">
+                                        <td class="text-left py-3 px-4">UniScholar Nexus SDD Report</td>
+                                        <td class="text-left py-3 px-4">Mii Si Heng</td>
+                                        <td class="text-left py-3 px-4">2025-07-20</td>
+                                        <td class="text-left py-3 px-4">
+                                            <span
+                                                class="bg-yellow-200 text-yellow-800 text-xs font-medium mr-2 px-2.5 py-0.5 rounded-full">
+                                                Pending
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    const tabShared = document.getElementById("tab-shared");
+                    const tabSubmitted = document.getElementById("tab-submitted");
+                    const contentShared = document.getElementById("content-shared");
+                    const contentSubmitted = document.getElementById("content-submitted");
+
+                    tabShared.addEventListener("click", () => {
+                        tabShared.classList.add("text-blue-600", "border-b-2", "border-blue-500");
+                        tabShared.classList.remove("text-gray-500");
+                        tabSubmitted.classList.remove("text-blue-600", "border-b-2", "border-blue-500");
+                        tabSubmitted.classList.add("text-gray-500");
+                        contentShared.classList.remove("hidden");
+                        contentSubmitted.classList.add("hidden");
+                    });
+
+                    tabSubmitted.addEventListener("click", () => {
+                        tabSubmitted.classList.add("text-blue-600", "border-b-2", "border-blue-500");
+                        tabSubmitted.classList.remove("text-gray-500");
+                        tabShared.classList.remove("text-blue-600", "border-b-2", "border-blue-500");
+                        tabShared.classList.add("text-gray-500");
+                        contentSubmitted.classList.remove("hidden");
+                        contentShared.classList.add("hidden");
+                    });
+                </script>
+
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center text-sm text-gray-600">
+            <div>
+                <a class="hover:text-blue-500 mr-4" href="#">Term of Service</a>
+                <a class="hover:text-blue-500 mr-4" href="#">Privacy Policy</a>
+                <a class="hover:text-blue-500" href="#">Contact Us</a>
+            </div>
+            <p>©2025 UniScholar Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
